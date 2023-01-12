@@ -46,7 +46,7 @@ public class RealtyService {
 			/** Note: Banner-service */
 			Banner bannerRequest = new Banner(realty.getNo(), 1, "123456789", "021546876");
 			bannerServiceClient.create(bannerRequest);
-			System.err.println(user);
+			realtyRepository.save(realty);
 			return Objects.nonNull(userService.updateUser(user));			
 		}
 		return false;
